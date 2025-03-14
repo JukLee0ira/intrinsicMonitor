@@ -7,8 +7,8 @@ This is a tool for monitoring XDC network nodes. It uses InfluxDB to store metri
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/XinFinOrg/XDCMonitor
-cd XDCMonitor
+git clone https://github.com/JukLee0ira/intrinsicMonitor.git
+cd intrinsicMonitor
 ```
 
 2. Start the service:

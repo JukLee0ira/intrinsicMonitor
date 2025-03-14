@@ -10,7 +10,12 @@ services:
       - influxdb-data:/var/lib/influxdb
       - ./influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
     environment:
-      - INFLUXDB_DB=xdc
+      - INFLUXDB_META_DIR=/var/lib/influxdb/meta
+      - INFLUXDB_DATA_DIR=/var/lib/influxdb/data
+      - INFLUXDB_DATA_WAL_DIR=/var/lib/influxdb/wal
+      - INFLUXDB_HTTP_ENABLED=true
+      - INFLUXDB_HTTP_BIND_ADDRESS=:8086
+      - INFLUXDB_DB=xdc_main
       - INFLUXDB_ADMIN_USER=user01
       - INFLUXDB_ADMIN_PASSWORD=12345678
       - INFLUXDB_USER=xdc

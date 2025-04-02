@@ -59,12 +59,12 @@ After successfully logging into Grafana, you need to configure the InfluxDB data
 #### Node Configuration
 If you need to monitor your own node, please add the following configuration to the node startup parameters:
 ```bash
---metrics \
---metrics-influxdb \
---metrics-influxdb.database "xdc" \
---metrics-influxdb.username "xdc" \
---metrics-influxdb.password "xdc" \
---metrics-influxdb.endpoint "http://your-ip:8086"
+        --metrics \
+        --metrics-influxdb \
+        --metrics-influxdb.database "xdc" \
+        --metrics-influxdb.username "xdc" \
+        --metrics-influxdb.password "xdc" \
+        --metrics-influxdb.endpoint "http://your-ip:8086"
 ```
 
 Once everything is configured, you should see the following effect:
